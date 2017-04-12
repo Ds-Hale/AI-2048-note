@@ -148,6 +148,7 @@ AI.prototype.iterativeDeep = function() {
   var start = (new Date()).getTime();
   var depth = 0;
   var best;
+  //没有规定固定的depth 而是规定了计算时间，在规定时间内能计算到的深度
   do {
     var newBest = this.search(depth, -10000, 10000, 0 ,0);
     if (newBest.move == -1) {
